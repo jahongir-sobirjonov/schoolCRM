@@ -11,7 +11,6 @@ import uniqueproject.uz.schoolcrm.service.UserService;
 @RequestMapping("/users")
 @RequiredArgsConstructor
 public class UserController {
-
     private final UserService userService;
 
     @PostMapping("/register")
