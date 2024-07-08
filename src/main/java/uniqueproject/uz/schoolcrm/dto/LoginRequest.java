@@ -1,7 +1,5 @@
 package uniqueproject.uz.schoolcrm.dto;
-
 import lombok.*;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
