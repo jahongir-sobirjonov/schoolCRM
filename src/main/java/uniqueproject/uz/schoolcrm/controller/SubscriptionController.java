@@ -13,7 +13,6 @@ import java.util.UUID;
 @RequestMapping("/subscriptions")
 @RequiredArgsConstructor
 public class SubscriptionController {
-
     private final SubscriptionService subscriptionService;
 
     @GetMapping

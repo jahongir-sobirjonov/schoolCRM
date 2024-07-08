@@ -13,9 +13,7 @@ import java.util.UUID;
 @RequestMapping("/students")
 @RequiredArgsConstructor
 public class StudentController {
-
     private final StudentService studentService;
-
     @GetMapping
     public ResponseEntity<List<Student>> getAllStudents() {
         List<Student> students = studentService.getAllStudents();
