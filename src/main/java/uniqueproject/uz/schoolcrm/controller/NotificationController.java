@@ -13,10 +13,7 @@ import java.util.UUID;
 @RequestMapping("/notifications")
 @RequiredArgsConstructor
 public class NotificationController {
-
-
     private final NotificationService notificationService;
-
     @GetMapping
     public ResponseEntity<List<Notification>> getAllNotifications() {
         List<Notification> notifications = notificationService.getAllNotifications();

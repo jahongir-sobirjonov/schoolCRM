@@ -14,7 +14,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class LessonController {
     private final LessonService lessonService;
-
     @GetMapping
     public ResponseEntity<List<Lesson>> getAllLessons() {
         List<Lesson> lessons = lessonService.getAllLessons();
