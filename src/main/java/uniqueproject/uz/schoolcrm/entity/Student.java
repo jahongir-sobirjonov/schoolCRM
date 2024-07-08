@@ -1,8 +1,8 @@
 package uniqueproject.uz.schoolcrm.entity;
 
 import jakarta.persistence.*;
-
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Student {

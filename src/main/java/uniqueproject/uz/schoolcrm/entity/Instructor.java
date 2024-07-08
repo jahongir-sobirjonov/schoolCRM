@@ -1,4 +1,6 @@
 package uniqueproject.uz.schoolcrm.entity;
+import java.util.List;
+import java.util.UUID;
 
 import jakarta.persistence.*;
 
@@ -6,7 +8,7 @@ import jakarta.persistence.*;
 public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
     private String name;
     private String bio;
     private String profilePictureUrl;
