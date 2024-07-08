@@ -1,8 +1,10 @@
 package uniqueproject.uz.schoolcrm.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uniqueproject.uz.schoolcrm.entity.Group;
+import uniqueproject.uz.schoolcrm.service.GroupService;
 
 import java.util.List;
 
@@ -13,18 +15,21 @@ public class GroupController {
     private final GroupService groupService;
 
     @GetMapping
-    public List<Group> getAllGroups() {
-        return groupService.getAllGroups();
+    public ResponseEntity<List<Group>> getAllGroups() {
+        List<Group> groups = groupService.getAllGroups();
+        return ResponseEntity.ok(groups);
     }
 
     @GetMapping("/{id}")
-    public Group getGroupById(@PathVariable Long id) {
-        return groupService.getGroupById(id);
+    public ResponseEntity<Group> getGroupById(@PathVariable Long id) {
+        Group group = groupService.getGroupById(id);
+        return ResponseEntity.ok(group);
     }
 
     @PostMapping
-    public Group createGroup(@RequestBody Group group) {
-        return groupService.createGroup(group);
+    public ResponseEntity<Group> createGroup(@RequestBody Group group) {
+        Group createdGroup = groupService.createGroup(group);
+        return ResponseEntity.status(201).body(createdGroup);
     }
 }
 

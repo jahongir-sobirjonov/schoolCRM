@@ -1,8 +1,10 @@
 package uniqueproject.uz.schoolcrm.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uniqueproject.uz.schoolcrm.entity.Student;
+import uniqueproject.uz.schoolcrm.service.StudentService;
 
 import java.util.List;
 
@@ -14,18 +16,21 @@ public class StudentController {
     private final StudentService studentService;
 
     @GetMapping
-    public List<Student> getAllStudents() {
-        return studentService.getAllStudents();
+    public ResponseEntity<List<Student>> getAllStudents() {
+        List<Student> students = studentService.getAllStudents();
+        return ResponseEntity.ok(students);
     }
 
     @GetMapping("/{id}")
-    public Student getStudentById(@PathVariable Long id) {
-        return studentService.getStudentById(id);
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
+        Student student = studentService.getStudentById(id);
+        return ResponseEntity.ok(student);
     }
 
     @PostMapping
-    public Student createStudent(@RequestBody Student student) {
-        return studentService.createStudent(student);
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+        Student createdStudent = studentService.createStudent(student);
+        return ResponseEntity.status(201).body(createdStudent);
     }
 }
 
