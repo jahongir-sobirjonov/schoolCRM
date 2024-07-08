@@ -7,6 +7,7 @@ import uniqueproject.uz.schoolcrm.entity.Student;
 import uniqueproject.uz.schoolcrm.service.StudentService;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/students")
@@ -22,7 +23,7 @@ public class StudentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
+    public ResponseEntity<Student> getStudentById(@PathVariable UUID id) {
         Student student = studentService.getStudentById(id);
         return ResponseEntity.ok(student);
     }

@@ -6,6 +6,7 @@ import uniqueproject.uz.schoolcrm.entity.Notification;
 import uniqueproject.uz.schoolcrm.repository.NotificationRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class NotificationService {
         return notificationRepository.findAll();
     }
 
-    public Notification getNotificationById(Long id) {
+    public Notification getNotificationById(UUID id) {
         return notificationRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Notification not found"));
     }

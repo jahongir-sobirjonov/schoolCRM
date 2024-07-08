@@ -7,6 +7,7 @@ import uniqueproject.uz.schoolcrm.entity.Notification;
 import uniqueproject.uz.schoolcrm.service.NotificationService;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/notifications")
@@ -23,7 +24,7 @@ public class NotificationController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Notification> getNotificationById(@PathVariable Long id) {
+    public ResponseEntity<Notification> getNotificationById(@PathVariable UUID id) {
         Notification notification = notificationService.getNotificationById(id);
         return ResponseEntity.ok(notification);
     }

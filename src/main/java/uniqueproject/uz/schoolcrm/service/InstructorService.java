@@ -6,6 +6,7 @@ import uniqueproject.uz.schoolcrm.entity.Instructor;
 import uniqueproject.uz.schoolcrm.repository.InstructorRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class InstructorService {
         return instructorRepository.findAll();
     }
 
-    public Instructor getInstructorById(Long id) {
+    public Instructor getInstructorById(UUID id) {
         return instructorRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Instructor not found"));
     }

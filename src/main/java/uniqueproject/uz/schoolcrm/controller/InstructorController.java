@@ -23,7 +23,7 @@ public class InstructorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Instructor> getInstructorById(@PathVariable Long id) {
+    public ResponseEntity<Instructor> getInstructorById(@PathVariable UUID id) {
         Instructor instructor = instructorService.getInstructorById(id);
         return ResponseEntity.ok(instructor);
     }

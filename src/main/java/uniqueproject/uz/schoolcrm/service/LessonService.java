@@ -6,6 +6,7 @@ import uniqueproject.uz.schoolcrm.entity.Lesson;
 import uniqueproject.uz.schoolcrm.repository.LessonRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class LessonService {
         return lessonRepository.findAll();
     }
 
-    public Lesson getLessonById(Long id) {
+    public Lesson getLessonById(UUID id) {
         return lessonRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Lesson not found"));
     }

@@ -6,6 +6,7 @@ import uniqueproject.uz.schoolcrm.entity.Student;
 import uniqueproject.uz.schoolcrm.repository.StudentRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public Student getStudentById(Long id) {
+    public Student getStudentById(UUID id) {
         return studentRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Student not found"));
     }

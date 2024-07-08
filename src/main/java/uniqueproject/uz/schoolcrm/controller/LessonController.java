@@ -7,6 +7,7 @@ import uniqueproject.uz.schoolcrm.entity.Lesson;
 import uniqueproject.uz.schoolcrm.service.LessonService;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/lessons")
@@ -21,7 +22,7 @@ public class LessonController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Lesson> getLessonById(@PathVariable Long id) {
+    public ResponseEntity<Lesson> getLessonById(@PathVariable UUID id) {
         Lesson lesson = lessonService.getLessonById(id);
         return ResponseEntity.ok(lesson);
     }

@@ -7,6 +7,7 @@ import uniqueproject.uz.schoolcrm.entity.Group;
 import uniqueproject.uz.schoolcrm.service.GroupService;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/groups")
@@ -21,7 +22,7 @@ public class GroupController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Group> getGroupById(@PathVariable Long id) {
+    public ResponseEntity<Group> getGroupById(@PathVariable UUID id) {
         Group group = groupService.getGroupById(id);
         return ResponseEntity.ok(group);
     }
