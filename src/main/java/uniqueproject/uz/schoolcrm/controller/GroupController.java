@@ -14,7 +14,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class GroupController {
     private final GroupService groupService;
-
     @GetMapping
     public ResponseEntity<List<Group>> getAllGroups() {
         List<Group> groups = groupService.getAllGroups();
