@@ -1,10 +1,17 @@
 package uniqueproject.uz.schoolcrm.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
+
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

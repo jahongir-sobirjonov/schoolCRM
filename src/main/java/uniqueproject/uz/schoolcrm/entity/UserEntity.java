@@ -1,7 +1,14 @@
 package uniqueproject.uz.schoolcrm.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
+
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,9 +1,15 @@
 package uniqueproject.uz.schoolcrm.entity;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Date;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

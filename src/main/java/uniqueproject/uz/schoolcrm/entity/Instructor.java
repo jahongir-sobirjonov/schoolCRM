@@ -3,8 +3,14 @@ import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
