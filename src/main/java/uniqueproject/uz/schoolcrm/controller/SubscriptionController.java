@@ -23,7 +23,7 @@ public class SubscriptionController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Subscription> getSubscriptionById(@PathVariable Long id) {
+    public ResponseEntity<Subscription> getSubscriptionById(@PathVariable UUID id) {
         Subscription subscription = subscriptionService.getSubscriptionById(id);
         return ResponseEntity.ok(subscription);
     }

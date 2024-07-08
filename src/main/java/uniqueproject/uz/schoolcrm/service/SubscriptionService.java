@@ -6,6 +6,7 @@ import uniqueproject.uz.schoolcrm.entity.Subscription;
 import uniqueproject.uz.schoolcrm.repository.SubscriptionRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class SubscriptionService {
         return subscriptionRepository.findAll();
     }
 
-    public Subscription getSubscriptionById(Long id) {
+    public Subscription getSubscriptionById(UUID id) {
         return subscriptionRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Subscription not found"));
     }
@@ -25,5 +26,4 @@ public class SubscriptionService {
         return subscriptionRepository.save(subscription);
     }
 }
-{
-}
+
