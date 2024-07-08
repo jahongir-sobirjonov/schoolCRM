@@ -1,9 +1,9 @@
 package uniqueproject.uz.schoolcrm.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+import uniqueproject.uz.schoolcrm.dto.LoginRequest;
 import uniqueproject.uz.schoolcrm.entity.UserEntity;
 import uniqueproject.uz.schoolcrm.service.UserService;
 
