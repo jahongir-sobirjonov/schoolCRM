@@ -1,7 +1,5 @@
 package uniqueproject.uz.schoolcrm.entity;
 import java.util.List;
-import java.util.UUID;
-
 import jakarta.persistence.*;
 import lombok.*;
 
