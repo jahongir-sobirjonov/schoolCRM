@@ -18,5 +18,6 @@ public class UserEntity extends BaseEntity {
     private String password;
     private UserRole role; // ADMIN, INSTRUCTOR, STUDENT
 
+
 }
 
