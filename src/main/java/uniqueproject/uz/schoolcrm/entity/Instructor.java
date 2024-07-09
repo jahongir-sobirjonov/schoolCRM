@@ -16,7 +16,5 @@ public class Instructor extends BaseEntity {
 
     @OneToMany(mappedBy = "instructor")
     private List<Lesson> lessons;
-
-    // Getters and setters
 }
 
