@@ -20,7 +20,5 @@ public class Group extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "student_id")
     )
     private List<Student> students;
-
-    // Getters and setters
 }
 
