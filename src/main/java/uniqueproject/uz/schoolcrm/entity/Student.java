@@ -24,6 +24,5 @@ public class Student {
     @OneToMany(mappedBy = "student")
     private List<Lesson> lessons;
 
-    // Getters and setters
 }
 
