@@ -20,7 +20,5 @@ public class Lesson extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;
-
-    // Getters and setters
 }
 
