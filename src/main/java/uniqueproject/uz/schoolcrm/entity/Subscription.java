@@ -12,10 +12,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class Subscription {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class Subscription extends BaseEntity {
     private String type; // e.g., Monthly, Yearly
     private Date startDate;
     private Date endDate;
