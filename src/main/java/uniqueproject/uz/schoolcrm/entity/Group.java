@@ -11,10 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class Group {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class Group extends BaseEntity{
     private String name;
     private String description;
 

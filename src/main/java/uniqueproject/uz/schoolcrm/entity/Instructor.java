@@ -11,10 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Instructor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class Instructor extends BaseEntity {
     private String name;
     private String bio;
     private String profilePictureUrl;
