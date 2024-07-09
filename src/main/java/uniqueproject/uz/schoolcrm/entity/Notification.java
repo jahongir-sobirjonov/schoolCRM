@@ -12,10 +12,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class Notification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class Notification extends BaseEntity {
     private String message;
     private Date date;
 
