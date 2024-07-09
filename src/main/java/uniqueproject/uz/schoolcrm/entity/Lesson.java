@@ -19,6 +19,7 @@ public class Lesson extends BaseEntity {
     @JoinColumn(name = "instructor_id")
     private Instructor instructor;
 
+
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;

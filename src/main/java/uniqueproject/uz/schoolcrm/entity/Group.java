@@ -15,6 +15,7 @@ public class Group extends BaseEntity{
     private String name;
     private String description;
 
+
     @ManyToMany
     @JoinTable(
             name = "group_students",
