@@ -13,10 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class UserEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class UserEntity extends BaseEntity {
     private String phone;
     private String password;
     private UserRole role; // ADMIN, INSTRUCTOR, STUDENT
