@@ -13,10 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+public class Student extends BaseEntity {
     private String name;
     private Date birthDate;
     private String profilePictureUrl;
